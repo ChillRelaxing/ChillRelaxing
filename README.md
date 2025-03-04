@@ -43,7 +43,9 @@
 
 <br clear="both">
 
-<img src="https://github.com/ChillRelaxing/ChillRelaxing/blob/output/snake.svg" alt="Snake animation"/>
+<p align="center">
+  <img src="https://github.com/ChillRelaxing/ChillRelaxing/blob/output/snake.svg" alt="Snake Animation"/>
+</p>
 
 <h2 align="left">¡PERFIL EN PROCESO!</h2>
 
