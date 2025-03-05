@@ -17,6 +17,8 @@ jobs:
         with:
           github_user_name: ChillRelaxing # Aquí tu usuario
           svg_out_path: dist/snake.svg
+          output_format: svg_with_bg # Permite definir el fondo
+          background_color: "#000000" # Negro en formato hexadecimal
 
       - name: Subir Snake
         uses: peaceiris/actions-gh-pages@v3
