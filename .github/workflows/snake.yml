@@ -2,35 +2,40 @@ name: Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Ejecuta cada medianoche
-  workflow_dispatch: # Permite ejecutarlo manualmente
-
-permissions:
-  contents: write # Permisos para publicar en la rama output
+    - cron: "0 0 * * *" # Ejecuta todos los días a medianoche
+  workflow_dispatch: # Permite ejecución manual
+  push:
+    branches:
+      - main # Se ejecuta cuando haces push a la rama principal
 
 jobs:
   snake:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
+      # Paso 1: Checkout del repositorio
       - name: Checkout repositorio
         uses: actions/checkout@v3
 
+      # Paso 2: Generar Snake con diferentes paletas
       - name: Generar Snake 🐍
         uses: Platane/snk@v3
         with:
-<<<<<<< HEAD
-          github_user_name: ChillRelaxing # Aquí tu usuario
-          svg_out_path: dist/snake.svg
-          output_format: svg_with_bg # Permite definir el fondo
-          background_color: "#000000" # Negro en formato hexadecimal
-=======
-          github_user_name: ChillRelaxing
-          outputs: dist/snake.svg # Nueva configuración
->>>>>>> f643d989d42b781aad6cfd96f5644ab2266c964f
+          github_user_name: ChillRelaxing # Tu usuario de GitHub
+          outputs: |
+            dist/snake.svg?palette=github-dark # Fondo oscuro automático
+            dist/snake-black.svg?background_color=000000 # Fondo negro
+            dist/snake-cyberpunk.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9 # Estilo Cyberpunk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # Paso 3: Subir las animaciones al branch 'output'
       - name: Subir Snake
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: output
           publish_dir: ./dist
+          commit_message: "🐍 Update Snake Animation [skip ci]"
+
