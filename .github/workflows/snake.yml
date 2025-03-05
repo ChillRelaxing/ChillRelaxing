@@ -2,8 +2,11 @@ name: Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Ejecuta la animación todos los días a la medianoche
-  workflow_dispatch: # Permite ejecutar manualmente desde Actions
+    - cron: "0 0 * * *" # Ejecuta cada medianoche
+  workflow_dispatch: # Permite ejecutarlo manualmente
+
+permissions:
+  contents: write # Permisos para publicar en la rama output
 
 jobs:
   snake:
@@ -11,18 +14,23 @@ jobs:
     steps:
       - name: Checkout repositorio
         uses: actions/checkout@v3
-        
+
       - name: Generar Snake 🐍
         uses: Platane/snk@v3
         with:
+<<<<<<< HEAD
           github_user_name: ChillRelaxing # Aquí tu usuario
           svg_out_path: dist/snake.svg
           output_format: svg_with_bg # Permite definir el fondo
           background_color: "#000000" # Negro en formato hexadecimal
+=======
+          github_user_name: ChillRelaxing
+          outputs: dist/snake.svg # Nueva configuración
+>>>>>>> f643d989d42b781aad6cfd96f5644ab2266c964f
 
       - name: Subir Snake
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub ya lo genera automáticamente
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: output
           publish_dir: ./dist
