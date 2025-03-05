@@ -26,7 +26,8 @@ Hola soy Leo
 
 
 ### 🐍 Snake Animation
-![snake gif](https://github.com/YOUR_USERNAME/YOUR_USERNAME/blob/output/github-snake-dark.svg)
+![snake gif](https://github.com/ChillRelaxing/ChillRelaxing/blob/output/github-snake-dark.svg)
+
 
 ###
 
