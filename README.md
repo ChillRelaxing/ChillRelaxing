@@ -8,8 +8,6 @@
 <img align="right" height="150" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXpndHZ4dHc3Ynp5c2U4dnp6OXJ3M2ZtaWQwNmw5MmtkYWpodWV2aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11KzOet1ElBDz2/giphy.gif"  />
 
 ### 🚀 Tech Stack
-<details>
-<summary>Click para ver tecnologías</summary>
 <div align="left">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40"/>
@@ -19,9 +17,6 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40"/>
 </div>
-</details>
-
-###
 
 ### 📊 GitHub Stats
 <div align="center">
@@ -37,4 +32,5 @@
 <h2 align="left">¡PERFIL EN PROCESO!</h2>
 
 ###
+
 
